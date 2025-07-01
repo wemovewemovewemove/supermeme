@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pathos Administration</title>
-  <!-- Tailwind CSS CDN with dark mode -->
+
+  <!-- Tailwind CSS CDN with dark mode support -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -14,20 +15,23 @@
       }
     }
   </script>
-  <style>
-    /* Custom fonts or overrides can go here */
-  </style>
 </head>
 <body class="bg-zinc-900 text-zinc-200 font-sans min-h-screen">
-  <main class="w-full h-full min-h-screen max-w-screen p-12 flex flex-col bg-zinc-900 text-zinc-200">
-    
-    <header class="flex items-center justify-between mb-6">
+
+  <main class="w-full h-full min-h-screen max-w-screen-xl mx-auto p-6 flex flex-col gap-4">
+
+    <!-- Header with logo and login -->
+    <header class="flex items-center justify-between">
       <a href="#" class="flex items-center gap-4">
-        <img src="pathos-logo-64x64.png" alt="Pathos Logo" class="logo">
-        <h1 class="text-3xl hidden sm:block font-medium text-gray-100 text-gray-150 group-hover:underline decoration-gray-400/50 decoration-3 underline-offset-4 transition-all">Pathos - III</h1>
+        <img src="pathos-logo-64x64.png" alt="Pathos Logo" class="w-12 h-12">
+        <h1 class="text-3xl hidden sm:block font-medium text-gray-100 group-hover:underline decoration-gray-400/50 decoration-3 underline-offset-4 transition-all">
+          Pathos - III
+        </h1>
       </a>
-      <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-zinc-950 dark:focus-visible:ring-zinc-300 bg-zinc-900 text-zinc-50 hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90 h-10 px-4 py-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-in">
+      <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-zinc-950 dark:focus-visible:ring-zinc-300 bg-zinc-900 text-zinc-50 hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90 h-10 px-4 py-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="lucide lucide-log-in mr-2">
           <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
           <polyline points="10 17 15 12 10 7" />
           <line x1="15" x2="3" y1="12" y2="12" />
@@ -36,7 +40,7 @@
       </button>
     </header>
 
-    <!-- Updated breadcrumb section -->
+    <!-- Breadcrumb (below header only) -->
     <div class="py-3">
       <nav aria-label="breadcrumb">
         <ol class="flex flex-wrap items-center gap-1.5 break-words text-sm text-zinc-500 sm:gap-2.5 dark:text-zinc-400">
@@ -44,27 +48,26 @@
             <a class="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50" href="/">Home</a>
           </li>
           <li role="presentation" aria-hidden="true" class="[&>svg]:size-3.5">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" 
-                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
-                 class="lucide lucide-slash">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="lucide lucide-slash">
               <path d="M22 2 2 22"></path>
             </svg>
           </li>
           <li class="inline-flex items-center gap-1.5">
-            <span role="link" aria-disabled="true" aria-current="page" class="font-normal text-zinc-950 dark:text-zinc-50">
-              Overview
-            </span>
+            <span role="link" aria-disabled="true" aria-current="page"
+              class="font-normal text-zinc-950 dark:text-zinc-50">Overview</span>
           </li>
         </ol>
       </nav>
     </div>
 
-    <!-- Updated section -->
-    <div class="py-6">
+    <!-- Main Content -->
+    <section class="py-6">
       <h1 class="text-3xl font-semibold">Administration</h1>
       <p class="text-zinc-500">You do not have permission to access the administration panel.</p>
-    </div>
-    
+    </section>
+
   </main>
 </body>
 </html>
